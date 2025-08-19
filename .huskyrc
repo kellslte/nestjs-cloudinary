@@ -1,0 +1,7 @@
+{
+  "hooks": {
+    "pre-commit": "npm run lint && npm run format",
+    "commit-msg": "echo 'Validating commit message format...'",
+    "pre-push": "npm run test"
+  }
+}

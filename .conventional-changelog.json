@@ -1,0 +1,72 @@
+{
+  "preset": "angular",
+  "releaseCount": 0,
+  "outputUnreleased": true,
+  "transform": {
+    "hash": true,
+    "date": true,
+    "author": true,
+    "committerDate": true,
+    "subject": true,
+    "body": true,
+    "footer": true,
+    "notes": true,
+    "references": true
+  },
+  "typeOrder": [
+    "feat",
+    "fix",
+    "perf",
+    "refactor",
+    "style",
+    "test",
+    "docs",
+    "chore"
+  ],
+  "noteGroups": [
+    {
+      "title": "⚠ BREAKING CHANGES",
+      "titleOrder": 1
+    }
+  ],
+  "groupBy": "type",
+  "commitGroupsSort": "title",
+  "commitsSort": ["scope", "subject"],
+  "noteGroupsSort": "title",
+  "notesSort": "text",
+  "transform": {
+    "groupBy": "type",
+    "commitGroupsSort": function(a, b) {
+      const order = {
+        "feat": 1,
+        "fix": 2,
+        "perf": 3,
+        "refactor": 4,
+        "style": 5,
+        "test": 6,
+        "docs": 7,
+        "chore": 8
+      };
+      return (order[a.title] || 9) - (order[b.title] || 9);
+    }
+  },
+  "writerOpts": {
+    "transform": {
+      "type": {
+        "feat": "✨ Features",
+        "fix": "🐛 Bug Fixes",
+        "perf": "⚡ Performance Improvements",
+        "refactor": "♻️ Code Refactoring",
+        "style": "💄 Styles",
+        "test": "✅ Tests",
+        "docs": "📚 Documentation",
+        "chore": "🔧 Chores",
+        "ci": "👷 CI",
+        "build": "📦 Build System"
+      }
+    },
+    "commitPartial": "- {{subject}} {{#if hash}}({{hash}}){{/if}}{{#if references}} {{references}}{{/if}}\n",
+    "headerPartial": "## [{{version}}]{{#if title}} \"{{title}}\"{{/if}}{{#if date}} - {{date}}{{/if}}\n\n",
+    "footerPartial": ""
+  }
+}
