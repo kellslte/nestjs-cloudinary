@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2025-08-19
+
+### 🔧 Other Changes
+
+- Initialize @scwar/nestjs-cloudinary module with core functionality, including Cloudinary integration, TypeScript support, and comprehensive documentation. Add ESLint and Prettier configurations, along with testing setup. Create scripts for version management and changelog updates. (f215cae)
+
+
 ## [1.0.0] - 2024-01-01
 
 ### ✨ Features
