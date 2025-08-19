@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2025-08-19
+
+### 🐛 Bug Fixes
+
+- fix: update main and types paths in package.json to reflect new directory structure (e05f532)
+
+
 ## [1.0.1] - 2025-08-19
 
 ### 🔧 Other Changes
